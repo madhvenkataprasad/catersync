@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest Catering Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+    <div class="container">
+        <h1>Find Nearest Catering Services</h1>
+        <form id="locationForm">
+            <label for="latitude">Your Latitude:</label>
+            <input type="number" id="latitude" step="any" required placeholder="e.g., 40.7128">
+            <label for="longitude">Your Longitude:</label>
+            <input type="number" id="longitude" step="any" required placeholder="e.g., -74.0060">
+            <label for="cuisine">Cuisine Type:</label>
+            <select id="cuisine">
+                <option value="">Any Cuisine</option>
+                <option value="Italian">Italian</option>
+                <option value="French">French</option>
+                <option value="Indian">Indian</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Chinese">Chinese</option>
+                <option value="American">American</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Thai">Thai</option>
+            </select>
+            <label for="menuItemsInput">Menu Items (comma-separated):</label>
+            <input type="text" id="menuItemsInput" placeholder="e.g., Sambar Dosa, Butter Chicken">
+            <button type="submit">Find Nearest Catering</button>
+        </form>
+        <div id="results">
+            <h2>Nearest Catering Services</h2>
+            <div id="cateringResult">
+                <p id="resultText">Enter your location and preferences to find the nearest catering services.</p>
+                <ul id="serviceList"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="catering.js"></script>
+</body>
+</html>

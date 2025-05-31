@@ -1,0 +1,267 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container, .info-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #34495e;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    color: #34495e;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #0984e3;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    padding: 12px;
+    background-color: #0984e3;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0652dd;
+}
+
+.contact-submit {
+    background-color: #e17055;
+}
+
+.contact-submit:hover {
+    background-color: #d63031;
+}
+
+#results, #cateringResult {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dfe6e9;
+}
+
+#resultText {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+#contactResult {
+    font-size: 1.2rem;
+    color: #27ae60;
+    text-align: center;
+    margin: 15px 0;
+}
+
+#serviceList {
+    list-style: none;
+    padding: 0;
+}
+
+#serviceList li {
+    margin: 15px 0;
+    padding: 15px;
+    border-bottom: 1px solid #dfe6e9;
+}
+
+#serviceList li:last-child {
+    border-bottom: none;
+}
+
+.service-details strong {
+    color: #34495e;
+}
+
+.service-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.service-details ul li {
+    padding: 5px 0;
+    font-size: 0.9rem;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.stats-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background: #0984e3;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.stat-box h4 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.stat-box p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+.guide-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.guide-step {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.guide-step img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.cta-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #0984e3;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .container, .info-container {
+        margin: 15px;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+}
